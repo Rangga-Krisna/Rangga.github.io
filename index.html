@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website Personal Branding RANGGA - Penggiat Robotic, IoT, & AI">
+    <title>RANGGA - Personal Branding</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Rajdhani:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- AOS Library (Animate on Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- GSAP for Animations -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.9.1/dist/gsap.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h1, h2, h3, .btn-primary {
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(145deg, #4C3C8C, #1A1A55);
+        }
+
+        .btn-primary {
+            background-color: #4C3C8C;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #6A4C9C;
+        }
+
+        .img-shadow {
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .hover-img:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .parallax {
+            background: url('https://via.placeholder.com/1600x800') no-repeat center center;
+            background-size: cover;
+            min-height: 400px;
+            position: relative;
+        }
+
+        .parallax-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+        }
+
+        .timeline {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .timeline-item {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 10px;
+            height: 10px;
+            background-color: #4C3C8C;
+            border-radius: 50%;
+        }
+
+        .timeline-item p {
+            margin-left: 30px;
+        }
+
+        /* Sticky Navbar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background-color: #1A1A55;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        /* Circle Image */
+        .circle-img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin-top: 20px;
+            border: 5px solid transparent;
+            background-image: linear-gradient(145deg, #4C3C8C, #1A1A55);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease;
+        }
+
+        .circle-img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+            filter: brightness(1.1);
+        }
+
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+
+    <!-- Navbar Section -->
+    <header class="navbar py-4">
+        <div class="container mx-auto flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <img src="https://via.placeholder.com/150x150" alt="Logo RANGGA" class="img-shadow">
+                <h1 class="text-2xl font-bold text-white">RANGGA</h1>
+            </div>
+            <!-- Navbar Links -->
+            <nav>
+                <ul class="flex space-x-6 text-white">
+                    <li><a href="#about" class="hover:text-purple-500">Tentang</a></li>
+                    <li><a href="#projects" class="hover:text-purple-500">Proyek</a></li>
+                    <li><a href="#timeline" class="hover:text-purple-500">Timeline</a></li>
+                    <li><a href="#contact" class="hover:text-purple-500">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Background Video -->
+    <section class="hero-bg py-32 text-center text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full z-0">
+            <video class="object-cover w-full h-full" autoplay muted loop>
+                <source src="https://via.placeholder.com/1600x900" type="video/mp4">
+            </video>
+        </div>
+        <div class="container mx-auto z-10 relative">
+            <img src="https://via.placeholder.com/200" alt="RANGGA" class="circle-img mx-auto">
+            <h1 class="text-6xl font-extrabold animate__animated animate__fadeIn">RANGGA</h1>
+            <p class="mt-4 text-xl animate__animated animate__fadeIn animate__delay-1s">Penggiat Robotic, IoT & Artificial Intelligence</p>
+            <div class="mt-8">
+                <a href="#about" class="btn-primary mx-4">Lihat Profil</a>
+                <a href="#contact" class="btn-primary mx-4">Hubungi Saya</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section with AOS Animation -->
+    <section id="about" class="py-20 px-8" data-aos="fade-up">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-purple-500">Tentang Saya</h2>
+            <div class="mt-6 max-w-3xl mx-auto">
+                <img src="https://via.placeholder.com/600x400" alt="RANGGA" class="rounded-lg img-shadow mb-6 hover-img">
+                <p class="text-lg">
+                    Saya adalah seorang penggiat di bidang Robotic, Internet of Things (IoT), dan Artificial Intelligence (AI). 
+                    Dengan pengalaman bertahun-tahun, saya berkomitmen untuk mengembangkan teknologi inovatif yang dapat 
+                    memberikan solusi cerdas untuk kehidupan sehari-hari.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyek Section -->
+    <section id="projects" class="bg-gray-800 py-20 px-8" data-aos="fade-up">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-purple-500">Proyek Terbaru</h2>
+            <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="bg-gray-700 p-6 rounded-lg img-shadow hover-img">
+                    <h3 class="text-xl font-semibold">Robotika untuk Pertanian Cerdas</h3>
+                    <p class="mt-2">Menciptakan robot untuk otomatisasi pertanian menggunakan sensor IoT untuk pengukuran tanah.</p>
+                    <img src="https://via.placeholder.com/400x300" alt="Proyek Robotika" class="mt-4 rounded-lg img-shadow">
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg img-shadow hover-img">
+                    <h3 class="text-xl font-semibold">Sistem Pemantauan Lingkungan dengan IoT</h3>
+                    <p class="mt-2">Mengembangkan sistem pemantauan udara dengan sensor IoT yang terhubung ke cloud.</p>
+                    <img src="https://via.placeholder.com/400x300" alt="IoT Environmental Monitoring" class="mt-4 rounded-lg img-shadow">
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg img-shadow hover-img">
+                    <h3 class="text-xl font-semibold">AI untuk Analisis Data Besar</h3>
+                    <p class="mt-2">Menggunakan machine learning untuk menganalisis data besar dalam prediksi cuaca dan pasar.</p>
+                    <img src="https://via.placeholder.com/400x300" alt="AI Data Analytics" class="mt-4 rounded-lg img-shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="py-20 px-8" data-aos="fade-up">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-purple-500">Timeline Pengalaman</h2>
+            <ul class="timeline mt-8">
+                <li class="timeline-item">
+                    <p><strong>2018:</strong> Mendirikan perusahaan robotik pertama saya yang fokus pada pengembangan solusi industri otomatis.</p>
+                </li>
+                <li class="timeline-item">
+                    <p><strong>2019:</strong> Berkolaborasi dengan tim internasional untuk proyek AI dalam pengolahan data besar.</p>
+                </li>
+                <li class="timeline-item">
+                    <p><strong>2020:</strong> Menyelesaikan proyek IoT Smart Home dengan teknologi pengendalian berbasis cloud.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gray-800 py-20 px-8" data-aos="fade-up">
+        <div class="container mx-auto text-center text-white">
+            <h2 class="text-4xl font-bold">Kontak</h2>
+            <form class="mt-6 max-w-3xl mx-auto">
+                <input type="text" placeholder="Nama" class="w-full p-3 mb-4 bg-gray-700 text-white rounded-md">
+                <input type="email" placeholder="Email" class="w-full p-3 mb-4 bg-gray-700 text-white rounded-md">
+                <textarea placeholder="Pesan" class="w-full p-3 mb-4 bg-gray-700 text-white rounded-md"></textarea>
+                <button type="submit" class="btn-primary">Kirim Pesan</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-6 text-center text-white">
+        <p>&copy; 2025 RANGGA | Semua Hak Dilindungi</p>
+        <div class="mt-4">
+            <a href="https://linkedin.com" target="_blank" class="text-purple-500 mx-2">LinkedIn</a>
+            <a href="https://github.com" target="_blank" class="text-purple-500 mx-2">GitHub</a>
+        </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS (Animate on Scroll)
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+        });
+    </script>
+</body>
+
+</html>
